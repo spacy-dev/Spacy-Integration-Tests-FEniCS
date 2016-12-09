@@ -16,8 +16,8 @@ install:
   ############################################################################
   # Download fenics docker image
   ############################################################################
-  - docker pull quay.io/fenicsproject/stable:latest
+  - docker pull quay.io/fenicsproject/dev:latest
 
 script:
-  - docker run --rm -v instant-cache:/home/fenics/.instant -v ${TRAVIS_BUILD_DIR}:${FENICS_SHARED} -w /home/fenics/shared quay.io/fenicsproject/stable "./run_test_in_docker.sh"
+  - docker run --rm -v instant-cache:/home/fenics/.instant -v ${TRAVIS_BUILD_DIR}:${FENICS_SHARED} -w /home/fenics/shared quay.io/fenicsproject/dev "./run_test_in_docker.sh"
 
