@@ -26,18 +26,17 @@ include(ConfigSafeGuards)
 
 if(Coverage)
   set(CMAKE_BUILD_TYPE Debug)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -coverage")
+  add_definitions(-coverage)
 endif()
 
 include_directories(.)
 
 find_package(Spacy CONFIG REQUIRED)
 include_directories(${Spacy_INCLUDE_DIRS})
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Spacy_CXX_FLAGS}")
+add_definitions(${Spacy_CXX_FLAGS})
 
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
-
 
 aux_source_directory(Mock MOCK_SRC_LIST)
 add_library(mocks ${MOCK_SRC_LIST})
