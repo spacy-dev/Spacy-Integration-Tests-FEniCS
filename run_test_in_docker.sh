@@ -27,6 +27,6 @@ ffc -l dolfin L2Functional.ufl
 
 cd ${FENICS_SHARED}
 mkdir -p build && cd build
-cmake .. -DDolfin=ON
+cmake .. -DDolfin=ON -DCMAKE_CXX_STANDARD=14
 make -j2 && ctest
 
