@@ -13,7 +13,7 @@ if(dealII)
   DEAL_II_INITIALIZE_CACHED_VARIABLES()
 endif()
 
-project(Spacy-Integration-Tests)
+project(Spacy-Integration-Tests-FEniCS)
 
 # Set path to cmake scripts
 set(CMAKE_MODULE_PATH
@@ -23,6 +23,8 @@ set(CMAKE_MODULE_PATH
 
 # Do not allow in-source builds
 include(ConfigSafeGuards)
+
+set(CMAKE_CXX_STANDARD 14)
 
 if(Coverage)
   set(CMAKE_BUILD_TYPE Debug)
