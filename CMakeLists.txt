@@ -25,6 +25,7 @@ set(CMAKE_MODULE_PATH
 include(ConfigSafeGuards)
 
 set(CMAKE_CXX_STANDARD 14)
+message(${CMAKE_CXX_STANDARD})
 
 if(Coverage)
   set(CMAKE_BUILD_TYPE Debug)
@@ -77,6 +78,7 @@ if(Kaskade)
   aux_source_directory(Kaskade SRC_LIST)
 endif()
 
+message(${CMAKE_CXX_STANDARD})
 
 include(CTest)
 enable_testing()
