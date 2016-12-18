@@ -24,19 +24,12 @@ set(CMAKE_MODULE_PATH
 # Do not allow in-source builds
 include(ConfigSafeGuards)
 
-set(CMAKE_CXX_STANDARD 14)
-message(${CMAKE_CXX_STANDARD})
-
 if(Coverage)
   set(CMAKE_BUILD_TYPE Debug)
   add_definitions(-coverage)
 endif()
 
 include_directories(.)
-
-find_package(Spacy CONFIG REQUIRED)
-include_directories(${Spacy_INCLUDE_DIRS})
-add_definitions(${Spacy_CXX_FLAGS})
 
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
@@ -77,6 +70,10 @@ if(Kaskade)
                    /home/lars/Libraries/software/gcc-5.4.0/dune-2.4.0/lib)
   aux_source_directory(Kaskade SRC_LIST)
 endif()
+
+find_package(Spacy CONFIG REQUIRED)
+include_directories(${Spacy_INCLUDE_DIRS})
+add_definitions(${Spacy_CXX_FLAGS})
 
 message(${CMAKE_CXX_STANDARD})
 
