@@ -73,9 +73,7 @@ endif()
 
 find_package(Spacy CONFIG REQUIRED)
 include_directories(${Spacy_INCLUDE_DIRS})
-add_definitions(${Spacy_CXX_FLAGS})
-set(CMAKE_CXX_STANDARD 14)
-message(${CMAKE_CXX_STANDARD})
+set(CMAKE_CXX_STANDARD ${Spacy_CXX_STANDARD})
 
 include(CTest)
 enable_testing()
