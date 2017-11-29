@@ -4,6 +4,7 @@ FENICS_SHARED="${FENICS_HOME}/shared"
 DEPS="${FENICS_SHARED}/deps"
 
 # Install gtest
+mkdir -p ${DEPS}
 cd ${DEPS}
 git clone https://github.com/google/googletest.git
 cd googletest && mkdir -p build && cd build && cmake .. && make -j2

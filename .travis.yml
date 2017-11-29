@@ -19,5 +19,5 @@ install:
   - docker pull quay.io/fenicsproject/stable:latest
 
 script:
-  - docker run --rm -v instant-cache:/home/fenics/.instant -v ${TRAVIS_BUILD_DIR}:${FENICS_SHARED} -w /home/fenics/shared quay.io/fenicsproject/stable "./run_test_in_docker.sh"
+  - docker run --rm -ti -v ${TRAVIS_BUILD_DIR}:${FENICS_SHARED} -w ${FENICS_SHARED} quay.io/fenicsproject/stable "bash run_test_in_docker.sh"
 
