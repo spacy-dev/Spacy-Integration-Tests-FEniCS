@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FENICS_SHARED="${FENICS_HOME}/shared"
-DEPS="${FENICS_SHARED}/deps"
+DEPS="${FENICS_HOME}/deps"
 
 # Install gtest
 sudo mkdir -p ${DEPS}
