@@ -1,5 +1,5 @@
 #!/bin/bash
-
+whoami
 FENICS_SHARED="${FENICS_HOME}/shared"
 DEPS="${FENICS_HOME}/deps"
 
