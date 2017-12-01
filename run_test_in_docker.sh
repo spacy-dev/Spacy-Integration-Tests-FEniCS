@@ -6,8 +6,12 @@ INCLUDE_DIR=$HOME/include
 LIB_DIR=$HOME/lib
 TEST_DIR=$HOME/test
 
+mkdir $DEPS
+mkdir $INCLUDE_DIR
+mkdir $LIB_DIR
+export PATH=$PATH:$INCLUDE_DIR:$LIB_DIR
+
 # Install gtest
-mkdir ${DEPS}
 cd ${DEPS}
 git clone https://github.com/google/googletest.git
 cd googletest && mkdir -p build && cd build && cmake .. && make -j2
