@@ -25,7 +25,7 @@ git clone https://github.com/spacy-dev/Spacy.git
 cd Spacy && mkdir -p build && cd build && cmake .. -DDolfin=ON -DCMAKE_INSTALL_PREFIX=$HOME && make -j2 && sudo make install
 
 # Run tests
-cp $FENICS_SHARED/* $TEST_DIR
+cp -r $FENICS_SHARED/* $TEST_DIR
 
 cd ${TEST_DIR}/FEniCS
 ffc -l dolfin LinearHeat.ufl
