@@ -6,17 +6,9 @@ services:
   - docker
 
 install:
-  ############################################################################
-  # All the dependencies are installed in ${TRAVIS_BUILD_DIR}/deps/
-  ############################################################################
-  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - FENICS_SHARED="/home/fenics/shared"
-  
-  ############################################################################
-  # Download fenics docker image
-  ############################################################################
   - docker pull quay.io/fenicsproject/stable:latest
 
 script:
-  - docker run --rm -ti -v ${TRAVIS_BUILD_DIR}:${FENICS_SHARED} -w ${FENICS_SHARED} quay.io/fenicsproject/stable "bash run_test_in_docker.sh"
+  - docker run --rm -ti -v ${TRAVIS_BUILD_DIR}:${FENICS_SHARED} -w ${FENICS_SHARED} quay.io/fenicsproject/stable ${FENICS_SHARED}/run_test_in_docker.sh
 
