@@ -2,8 +2,8 @@
 
 #include <dolfin.h>
 
-#include <Spacy/spacy.h>
-#include <Spacy/Adapter/FEniCS/vectorSpace.hh>
+#include <Spacy/Spacy.h>
+#include <Spacy/Adapter/FEniCS/VectorSpace.h>
 
 #include "LinearHeat.h"
 #include "L2Functional.h"

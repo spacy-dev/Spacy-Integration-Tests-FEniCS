@@ -1,4 +1,4 @@
-#include "norm.hh"
+#include "Norm.h"
 
 Spacy::Real Mock::Norm::operator()(const ::Spacy::Vector&) const
 {

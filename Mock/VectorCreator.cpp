@@ -1,9 +1,9 @@
-#include "vectorCreator.hh"
+#include "VectorCreator.h"
 
-#include <Spacy/vector.hh>
-#include <Spacy/vectorSpace.hh>
+#include <Spacy/Vector.h>
+#include <Spacy/VectorSpace.h>
 
-#include "vector.hh"
+#include "Vector.h"
 
 Mock::Vector Mock::VectorCreator::operator()(const Spacy::VectorSpace* space) const
 {

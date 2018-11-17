@@ -1,9 +1,9 @@
-#include "c2Functional.hh"
+#include "C2Functional.h"
 
-#include <Spacy/Spaces/ScalarSpace/Real.hh>
-#include <Spacy/vector.hh>
-#include <Spacy/vectorSpace.hh>
-#include "linearOperator.hh"
+#include <Spacy/Spaces/ScalarSpace/Real.h>
+#include <Spacy/Vector.h>
+#include <Spacy/VectorSpace.h>
+#include "LinearOperator.h"
 
 namespace Mock
 {

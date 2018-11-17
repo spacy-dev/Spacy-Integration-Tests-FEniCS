@@ -1,7 +1,7 @@
-#include "linearOperator.hh"
+#include "LinearOperator.h"
 
-#include <Spacy/Spaces/realSpace.hh>
-#include "linearSolver.hh"
+#include <Spacy/Spaces/RealSpace.h>
+#include "LinearSolver.h"
 
 namespace Mock
 {

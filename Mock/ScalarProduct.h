@@ -1,9 +1,9 @@
 #pragma once
 
-#include <Spacy/vector.hh>
-#include <Spacy/Spaces/realSpace.hh>
+#include <Spacy/Vector.h>
+#include <Spacy/Spaces/RealSpace.h>
 
-#include "norm.hh"
+#include "Norm.h"
 
 namespace Mock
 {

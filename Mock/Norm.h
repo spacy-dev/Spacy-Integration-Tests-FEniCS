@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Spacy/vector.hh>
-#include <Spacy/Spaces/realSpace.hh>
+#include <Spacy/Vector.h>
+#include <Spacy/Spaces/RealSpace.h>
 
 namespace Mock
 {
