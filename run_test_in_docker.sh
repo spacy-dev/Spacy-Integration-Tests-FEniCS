@@ -6,7 +6,7 @@ sudo apt update
 sudo apt install python3 python3-pip python3-venv liblapacke-dev -y
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
-export PATH="${PATH}:/home/dealii/.local/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
 pipx install conan
 conan profile new default
 conan profile update settings.compiler=gcc default
