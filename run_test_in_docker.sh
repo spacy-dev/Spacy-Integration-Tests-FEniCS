@@ -10,7 +10,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 pipx install conan
 conan profile new default
 conan profile update settings.compiler=gcc default
-conan profile update settings.compiler.version=9 default
+conan profile update settings.compiler.version=7 default
 conan profile update settings.arch=x86_64 default
 conan profile update settings.os=Linux default
 conan profile update settings.compiler.libcxx=libstdc++11 default
