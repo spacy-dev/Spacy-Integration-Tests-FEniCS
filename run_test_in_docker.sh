@@ -52,6 +52,7 @@ ffc -l dolfin L2Functional.ufl
 
 cd ${TEST_DIR}
 mkdir -p build && cd build
-cmake .. -DCMAKE_CXX_STANDARD=14 -DCMAKE_CXX_FLAGS=-I/usr/local/lib/python3.6/dist-packages/ffc/backends/ufc
+conan install ..
+cmake .. -DCMAKE_CXX_STANDARD=14 -DCMAKE_CXX_FLAGS=-I/usr/local/lib/python3.6/dist-packages/ffc/backends/ufc -DCMAKE_TOOLCHAIN_FILE=conan_paths.cmake
 make -j2 && ctest
 
