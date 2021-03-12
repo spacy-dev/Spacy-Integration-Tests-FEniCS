@@ -1,5 +1,6 @@
 #include "VectorCreator.h"
 
+#include <Spacy/Operator.h>
 #include <Spacy/Vector.h>
 #include <Spacy/VectorSpace.h>
 
