@@ -18,6 +18,10 @@ if(Coverage)
   add_definitions(-coverage)
 endif()
 
+find_package(Spacy CONFIG REQUIRED)
+find_package(GTest REQUIRED)
+find_package(Threads REQUIRED)
+
 include_directories(.)
 
 find_package(GTest REQUIRED)
@@ -25,6 +29,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 aux_source_directory(Mock MOCK_SRC_LIST)
 add_library(mocks ${MOCK_SRC_LIST})
+target_link_libraries(mocks PUBLIC Spacy::Spacy)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 
@@ -36,10 +41,6 @@ add_definitions(${DOLFIN_CXX_DEFINITIONS})
 aux_source_directory(FEniCS SRC_LIST)
 find_package(VTK HINTS ${VTK_DIR} $ENV{VTK_DIR} NO_MODULE QUIET)
 
-find_package(Spacy CONFIG REQUIRED)
-find_package(GTest REQUIRED)
-find_package(Threads REQUIRED)
-
 include(CTest)
 enable_testing()
 foreach(TEST ${SRC_LIST})
@@ -48,6 +49,6 @@ foreach(TEST ${SRC_LIST})
   string(REGEX REPLACE "/" "_" TEST_DIR ${TEST_DIR})
   set(TEST_UNIQUE_NAME "${TEST_DIR}_${TEST_NAME}")
   add_executable(${TEST_UNIQUE_NAME} ${TEST})
-  target_link_libraries(${TEST_UNIQUE_NAME} mocks ${DOLFIN_LIBRARIES} Spacy::Spacy GTest::GTest GTest::Main Threads::Threads)
+  target_link_libraries(${TEST_UNIQUE_NAME} mocks Spacy::Spacy ${DOLFIN_LIBRARIES} GTest::GTest GTest::Main Threads::Threads)
 add_test(${TEST_UNIQUE_NAME} ${PROJECT_BINARY_DIR}/${TEST_UNIQUE_NAME})
 endforeach()
