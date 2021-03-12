@@ -1,6 +1,7 @@
 #include "C2Functional.h"
 
 #include <Spacy/Spaces/ScalarSpace/Real.h>
+#include <Spacy/Operator.h>
 #include <Spacy/Vector.h>
 #include <Spacy/VectorSpace.h>
 #include "LinearOperator.h"
