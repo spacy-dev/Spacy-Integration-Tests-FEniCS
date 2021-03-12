@@ -1,5 +1,7 @@
 #include "Norm.h"
 
+#include <Spacy/Operator.h>
+
 Spacy::Real Mock::Norm::operator()(const ::Spacy::Vector&) const
 {
   return Spacy::Real(testValue);
