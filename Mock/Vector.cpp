@@ -1,5 +1,6 @@
 #include "Vector.h"
 
+#include <Spacy/Operator.h>
 #include <Spacy/Vector.h>
 #include <Spacy/VectorSpace.h>
 #include <Spacy/Spaces/RealSpace.h>
